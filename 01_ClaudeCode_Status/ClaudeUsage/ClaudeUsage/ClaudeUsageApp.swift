@@ -20,15 +20,21 @@ struct ClaudeUsageApp: App {
                     let remaining = 100 - data.fiveHourPercent
                     HStack(spacing: 2) {
                         Image(systemName: batteryIcon(remaining))
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(batteryColor(remaining))
                         Text("\(remaining)%")
                             .font(.system(.caption2, design: .monospaced))
+                            .foregroundStyle(batteryColor(remaining))
                     }
                 } else if data.hasStandardLimits {
                     let remaining = 100 - data.requestsUsedPercent
                     HStack(spacing: 2) {
                         Image(systemName: batteryIcon(remaining))
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(batteryColor(remaining))
                         Text("\(remaining)%")
                             .font(.system(.caption2, design: .monospaced))
+                            .foregroundStyle(batteryColor(remaining))
                     }
                 } else {
                     Image(systemName: "battery.0")
@@ -53,6 +59,14 @@ struct ClaudeUsageApp: App {
         case 26...50:  return "battery.50"
         case 1...25:   return "battery.25"
         default:       return "battery.0"
+        }
+    }
+
+    private func batteryColor(_ remaining: Int) -> Color {
+        switch remaining {
+        case 51...100: return .green
+        case 21...50:  return .yellow
+        default:       return .red
         }
     }
 }
