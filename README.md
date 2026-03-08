@@ -9,6 +9,7 @@ A collection of lightweight macOS menubar apps built for everyday productivity.
 | 01 | [Claude Code Usage Monitor](01_ClaudeCode_Status/) | Battery-style indicator showing Claude Code API usage remaining | Swift + SwiftUI |
 | 02 | [Keep Awake](02_Keep_Awake/) | Prevent Mac from sleeping with periodic mouse movement | Python + rumps |
 | 03 | [Agent Monitor](03_Agent_Monitor/) | Menubar dashboard for monitoring launchd automation agents | Python + rumps |
+| 04 | [Approval Notifier](04_Approval_Notifier/) | Approve Claude Code tool requests from macOS notifications (WIP) | Python + PreToolUse Hook |
 
 ## Why
 
