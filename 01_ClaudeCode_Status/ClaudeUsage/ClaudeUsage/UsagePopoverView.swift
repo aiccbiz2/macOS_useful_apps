@@ -288,6 +288,19 @@ struct UsagePopoverView: View {
                 }
                 .controlSize(.small)
             }
+
+            Divider().padding(.top, 8)
+
+            HStack {
+                Text("v1.0 by davidlikescat")
+                    .font(.system(size: 10))
+                    .foregroundStyle(.tertiary)
+                Spacer()
+                Link("Contact", destination: URL(string: "mailto:davidlikescat@icloud.com")!)
+                    .font(.system(size: 10))
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.top, 4)
         }
         .padding(.horizontal)
         .padding(.vertical, 12)
